@@ -38,6 +38,8 @@ int main(int argc, char *argv[])
                 cur_name[i], cur_age[i]);
     }
 
+    printf("---\n");
+
     // fourth way with pointers in a stupid way
     for (cur_name = names, cur_age = ages;
            (cur_age - ages) < count;  

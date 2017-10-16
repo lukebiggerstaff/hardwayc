@@ -102,7 +102,7 @@ void Database_create(struct Connection *conn)
 
     for (i = 0; i < MAX_ROWS; i++) {
         // make a prototype to initialize it
-        struct Address addr = { .id = 1,.set = 0 };
+        struct Address addr = { .id = i,.set = 0 };
         // then just assign it
         conn->db->rows[i] = addr;
     }

@@ -7,7 +7,7 @@
 #define MAX_DATA 512
 #define MAX_ROWS 100
 
-struct {
+struct Address {
     int id;
     int set;
     char name[MAX_DATA];
@@ -130,7 +130,7 @@ void Database_set(
         die("Email copy failed");
 }
 
-void Database_get(struct Connection *conn)
+void Database_get(struct Connection *conn, int id)
 {
     struct Address *addr = &conn->db->rows[id];
 
